@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Rationatsu Cursor</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;width:300px;padding:16px;font:13px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;background:#faf7ff;color:#352e45}
+  header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  header img{width:32px;height:32px;image-rendering:pixelated}
+  h1{font-size:15px;margin:0}
+  .row{margin:14px 0}
+  .label{display:flex;justify-content:space-between;font-weight:600;margin-bottom:6px}
+  .label output{color:#7f5fc0;font-weight:700}
+  input[type=range]{width:100%;accent-color:#9d7ad5}
+  .hint{font-size:11px;color:#8b819e;margin-top:3px;display:flex;justify-content:space-between}
+  .switch{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:#fff;border:1px solid #e8dff6;border-radius:12px}
+  .preview{height:96px;border:1px dashed #cdbbea;border-radius:12px;background:#fff;display:grid;place-items:center;overflow:hidden}
+  .preview img{image-rendering:pixelated}
+  button{width:100%;border:0;border-radius:10px;padding:9px;background:#efe7fb;color:#5b3f96;font-weight:700;cursor:pointer}
+  button:hover{background:#e3d6f8}
+  .note{font-size:11px;color:#8b819e;margin-top:10px}
+</style>
+</head>
+<body>
+  <header><img src="icons/icon48.png" alt=""><h1>Rationatsu Cursor</h1></header>
+
+  <label class="switch"><span>Kursor maskot aktif</span><input type="checkbox" id="enabled"></label>
+
+  <div class="row">
+    <div class="preview"><img id="preview" src="cursors/idle.png" alt="Pratinjau"></div>
+  </div>
+
+  <div class="row">
+    <div class="label"><span>Ukuran kursor</span><output id="sizeOut">32 px</output></div>
+    <input type="range" id="size" min="16" max="128" step="4">
+    <div class="hint"><span>Kecil</span><span>Besar</span></div>
+  </div>
+
+  <div class="row">
+    <div class="label"><span>Sensitivitas</span><output id="sensOut">100%</output></div>
+    <input type="range" id="sensitivity" min="10" max="100" step="5">
+    <div class="hint"><span>Melayang lembut</span><span>Langsung ikut mouse</span></div>
+  </div>
+
+  <button id="reset">Kembalikan ke bawaan</button>
+  <div class="note">Perubahan langsung berlaku di semua tab. Muat ulang tab yang sudah terbuka sebelum ekstensi dipasang.</div>
+  <script src="popup.js"></script>
+</body>
+</html>
