@@ -108,7 +108,7 @@
     if (s >= 100) {
       x = tx; y = ty; draw(); return;
     }
-    // Smoothing that does not depend on the monitor's refresh rate.
+   
     var dt = Math.min(0.05, Math.max(0.001, (now - (lastT || now - 16)) / 1000));
     lastT = now;
     var rate = 5 + (s / 100) * 55;          // 5 (floaty) .. 60 (almost instant)
