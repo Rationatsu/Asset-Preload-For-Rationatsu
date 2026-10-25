@@ -25,7 +25,7 @@
 <body>
   <header><img src="icons/icon48.png" alt=""><h1>Rationatsu Cursor</h1></header>
 
-  <label class="switch"><span>Kursor maskot aktif</span><input type="checkbox" id="enabled"></label>
+  <label class="switch"><span>On/Off</span><input type="checkbox" id="enabled"></label>
 
   <div class="row">
     <div class="preview"><img id="preview" src="cursors/idle.png" alt="Pratinjau"></div>
@@ -34,16 +34,16 @@
   <div class="row">
     <div class="label"><span>Ukuran kursor</span><output id="sizeOut">32 px</output></div>
     <input type="range" id="size" min="16" max="128" step="4">
-    <div class="hint"><span>Kecil</span><span>Besar</span></div>
+    <div class="hint"><span>Small</span><span>Besar</span></div>
   </div>
 
   <div class="row">
     <div class="label"><span>Sensitivitas</span><output id="sensOut">100%</output></div>
     <input type="range" id="sensitivity" min="10" max="100" step="5">
-    <div class="hint"><span>Melayang lembut</span><span>Langsung ikut mouse</span></div>
+    <div class="hint"><span>Softflying</span><span>Follow Mouse</span></div>
   </div>
 
-  <button id="reset">Kembalikan ke bawaan</button>
+  <button id="reset">Reset</button>
   <div class="note">Perubahan langsung berlaku di semua tab. Muat ulang tab yang sudah terbuka sebelum ekstensi dipasang.</div>
   <script src="popup.js"></script>
 </body>
